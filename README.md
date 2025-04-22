@@ -42,7 +42,7 @@ Our experiments are conducted on three benchmark datasets collected from Ciao, E
 Please unzip the datasets first. Also you need to create the `History/`+'dataset_name (e.g,ciao)' and the `Models/`+ 'dataset_name (e.g,ciao)' directories. The command lines to train SDR on the three datasets are as below. The hyperparameters in the commands are set as default.
 
 - Ciao
-  for Windows
+- for Windows
   ```
   scripts/run_yelp.bat
   ```  
@@ -51,8 +51,8 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
   bash scripts/run_ciao.sh
   ```
 
-- Epinions 
-  for Windows
+- Epinions
+- for Windows
   ```
   scripts/run_epinions.bat
   ```  
@@ -62,7 +62,7 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
   ```
 
 - Yelp
-  for Windows
+- for Windows
   ```
   scripts/run_yelp.bat
   ```  
