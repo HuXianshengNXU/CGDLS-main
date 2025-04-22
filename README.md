@@ -1,6 +1,5 @@
 # EDRec
 This is the PyTorch-based implementation for EDRec model proposed in this paper:
->Diffusion Model for Social Recommendation
 ![model](./framework1.png)
 ## Code Structures 
     .
