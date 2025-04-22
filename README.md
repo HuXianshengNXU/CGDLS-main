@@ -46,7 +46,7 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
   ```
   scripts/run_yelp.bat
   ```  
-  for Linux
+- for Linux
   ```shell
   bash scripts/run_ciao.sh
   ```
@@ -56,7 +56,7 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
   ```
   scripts/run_epinions.bat
   ```  
-  for Linux
+- for Linux
   ```shell
   bash scripts/run_epinions.sh
   ```
@@ -67,7 +67,7 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
   scripts/run_yelp.bat
   ```  
 
-  for Linux
+- for Linux
   ```shell
   bash scripts/run_yelp.sh
   ```
