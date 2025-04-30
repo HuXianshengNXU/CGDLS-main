@@ -1,5 +1,5 @@
 # CGDLS
-This is the PyTorch-based implementation for EDRec model proposed in this paper:
+This is the PyTorch-based implementation for CGDLS model proposed in this paper:
 ![model](./framework1.png)
 ## Code Structures 
     .
@@ -73,6 +73,6 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
   ```
 ## Evaluation Results
 ### Overall Performance:
-EDRec outperforms the baseline model with top-20 settings.
+CGDLS outperforms the baseline model with top-20 settings.
 ![performance](./result.png)
 
