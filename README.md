@@ -1,4 +1,4 @@
-# EDRec
+# CGDLS
 This is the PyTorch-based implementation for EDRec model proposed in this paper:
 ![model](./framework1.png)
 ## Code Structures 
