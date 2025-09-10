@@ -44,7 +44,7 @@ Please unzip the datasets first. Also you need to create the `History/`+'dataset
 - Ciao
 - for Windows
   ```
-  scripts/run_yelp.bat
+  scripts/run_ciao.bat
   ```  
 - for Linux
   ```shell
