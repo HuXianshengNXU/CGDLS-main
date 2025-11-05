@@ -110,7 +110,7 @@ class Coach():
                 self.epoch, time.time() - start_time, epoch_losses
             ), flush=True)
             if self.epoch % 5 == 0:
-                recall, ndcg ,test_time_elapsed = self.test(self.testloader, uuuEmbeds,uciEmbeds_test)
+                recall, ndcg ,test_time_elapsed = self.test(self.testloader, uuuEmbeds,uciEmbeds_train)
                 test_times.append(test_time_elapsed)
                 # Record the history of recall and ndcg
                 self.his_recall.append(recall)
@@ -232,8 +232,10 @@ class Coach():
                 uEmbeds = uiEmbeds[:self.n_user]
                 iEmbeds = uiEmbeds[self.n_user:]
                 user = uEmbeds[user_idx]
+                # user_predict = self.DiffProcess.p_sample(self.SDNet, uuuEmbeds[user_idx], args.sampling_steps, user_idx,
+                #                                          uciEmbeds_test,args.sampling_noise)
                 user_predict = self.DiffProcess.p_sample(self.SDNet, uuuEmbeds[user_idx], args.sampling_steps, user_idx,
-                                                         uciEmbeds_test,args.sampling_noise)
+                                                         uciEmbeds_test, args.sampling_noise)
                 user = user + user_predict
                 trnMask = trnMask.to(self.device)
                 allPreds = t.mm(user, t.transpose(iEmbeds, 1, 0)) * (1 - trnMask) - trnMask * 1e8
@@ -272,3 +274,5 @@ if __name__ == "__main__":
     handler.LoadData()
     app = Coach(handler)
     app.train()
+    print(args)
+
