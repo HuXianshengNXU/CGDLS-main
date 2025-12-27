@@ -117,7 +117,7 @@ class DiffusionProcess(nn.Module):
         terms["pred_xstart"] = model_output
         return terms
 
-    def p_sample(self, model, emb_s, steps, user_idx,uciEmbeds_test ,sampling_noise=False):
+    def p_sample(self, model, emb_s, steps, user_idx, uciEmbeds ,sampling_noise=False):
         assert steps <= self.steps, "Too much steps in inference."
         if steps == 0:
             emb_t = emb_s
@@ -128,7 +128,7 @@ class DiffusionProcess(nn.Module):
         indices = list(range(self.steps))[::-1]
 
         batch_index = user_idx.long()
-        uciEmbeds = uciEmbeds_test.to_dense()
+        uciEmbeds = uciEmbeds.to_dense()
         batch_common_item_embeds = uciEmbeds[batch_index]
         batch_common_item_embeds = batch_common_item_embeds.to(self.device)
         uciEmbeds_avg = th.mean(batch_common_item_embeds, dim=-1, keepdim=True)
